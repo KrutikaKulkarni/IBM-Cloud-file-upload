@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+</head>
+<body>
+
+<h1> Krutika Kulkarni</h1>
+<h2> 1001387529</h2>
+
+<form action="/upload" method="post" enctype = "multipart/form-data">
+    <input type="file" name="file_to_upload">
+    <input type="submit" value="Upload">
+
+</form>
+<h2>These files are on the cloud : </h2>
+<ul>
+{% for file in list_of_files %}
+    <li>{{file.name }} </li>  <br/>
+        {{file.bytes}} <br/>
+        {{file.last_modified}}</li>
+{% endfor %}
+</ul>
+
+<a href="download"> Click here to view file content</a> <br/>
+<!--
+<a href="delete"> Click here to Delete the file</a> -->
+</body>
+</html>

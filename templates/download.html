@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download file </title>
+</head>
+<body>
+    <form action="/file_download" method="post" enctype = "multipart/form-data">
+    Enter the file name to download <input type="text/file" name="file_to_download"/>
+    <input type="submit" value="Show Content"/>
+    </form>
+    <br/>
+    {{print_message}}
+</body>
+</html>
